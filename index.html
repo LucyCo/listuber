@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>ListTuber.com</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<script src="Sortable.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="docReady.js" type="text/javascript" charset="utf-8"></script>
+	<script src="main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+</head>
+<body>
+
+	<div id="container">
+
+		<!-- header -->	
+		<header id="header">
+			<h1 id="title">ListTuber</h1> 
+		</header>
+
+
+		<!-- Navigation -->	
+		<nav id="menu" class="clearfix">
+			<ul>
+				<li onclick="viewPlaylist()"><a href="#">Playlist</a></li>
+				<li onclick="viewEditor()"><a href="#" >Editor</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav> 
+		<!-- Sidebar -->
+		<aside  id="sidebar">
+			<div id="playerDiv"></div>
+			<button onclick="nextVideo()">Next</button>	
+		</aside>
+		<!-- Main Content area -->
+		<section id="content">
+
+			<div id="playlist">
+				<h2>List</h2>
+
+				<ul id="songsUl">
+					<li>
+						<img src="https://cdn.pastemagazine.com/www/system/images/photo_albums/the-50-best-band-logos/large/photo_8766_0-22.jpg" >
+						<h4>The Grasslands</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+					</li>
+
+					<li >
+						<img src="https://cdn.pastemagazine.com/www/system/images/photo_albums/the-50-best-band-logos/large/photo_8766_0-22.jpg" >
+						<h4>Lorem ipsum dolor sit amet</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+					</li>
+
+					<li >
+						<img src="https://cdn.pastemagazine.com/www/system/images/photo_albums/the-50-best-band-logos/large/photo_8766_0-22.jpg" >
+						<h4>consectetur adipisicing elit</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+					</li>
+
+					<li >
+						<img src="https://cdn.pastemagazine.com/www/system/images/photo_albums/the-50-best-band-logos/large/photo_8766_0-22.jpg" >
+						<h4>sed do eiusmod</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+					</li>
+				</ul>
+			</div>
+
+			<div id="editor">
+				<h2>Editor</h2>
+				<textarea id="listEditorTextArea"></textarea>
+				<span style="display:flex;justify-content:center;align-items:flex-end;">
+					<button type="button" onclick="textAreaInput()">Generate Playlist</button>
+				</span>
+			</div>
+
+		</section>
+
+		
+
+		<!-- Navigation -->
+		<footer id="footer" class="clearfix">
+			Copyright &copy Lauren Cohen 2016
+		</footer>
+
+	</div>
+</body>
+</html>
