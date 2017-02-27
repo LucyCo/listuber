@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from googleapiclient.discovery import build
 from flask import Flask, request
+import config
 app = Flask(__name__)
 
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 # tab of
 #   https://cloud.google.com/console
 # Please ensure that you have enabled the YouTube Data API for your project.
-DEVELOPER_KEY = "AIzaSyCG_5q4O9wxy-b69WccOaXjUz4lPDNqcoI"
+DEVELOPER_KEY = config.get_config(config.API_KEY_KEY)
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
@@ -36,4 +37,4 @@ def youtube_search():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3134)
+    app.run(debug=config.get_config(config.DEBUG_KEY), port=3134)
